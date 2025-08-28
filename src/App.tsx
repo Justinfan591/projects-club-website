@@ -60,7 +60,7 @@ export default function App() {
               Projects Club connects Rotman Commerce and CS students to ship portfolio‑worthy projects: hackathons, build nights, workshops, and industry collabs.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="#join" className="px-4 py-2 rounded-xl bg-slate-900 text-white hover:opacity-90">Apply / Join</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1h5CuLi0lXiUQ2n59tWM7Xn5aFbfAY4sThN-9O2dGlsBKqA/viewform" target="_blank" className="px-4 py-2 rounded-xl bg-slate-900 text-white hover:opacity-90">Apply / Join</a>
               <a href="#events" className="px-4 py-2 rounded-xl ring-1 ring-slate-300 hover:bg-white">Upcoming Events</a>
             </div>
             <div className="mt-6 flex items-center gap-6 text-sm text-slate-500">
@@ -153,7 +153,17 @@ export default function App() {
           <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
             {["Google","eBay","Walmart","Microsoft"].map((name) => (
               <div key={name} className="h-20 rounded-xl ring-1 ring-slate-200 grid place-items-center bg-slate-50 text-slate-600 font-medium">
-                {name}
+                <div className="h-20 w-40 flex items-center justify-center p-4">
+                <img
+                  src={`/${name.toLowerCase()}-logo.png`}
+                  alt={name}
+                  className="max-h-12"
+                  onError={(e) => {
+                    const img = e.currentTarget as HTMLImageElement;
+                    img.replaceWith(name);
+                  }}
+                />  
+                </div>
               </div>
             ))}
           </div>
@@ -171,7 +181,7 @@ export default function App() {
             <input type="email" required placeholder="Email address" className="px-4 py-3 rounded-xl ring-1 ring-slate-300 bg-white focus:ring-2 focus:ring-slate-900 outline-none" />
             <button type="submit" className="px-5 py-3 rounded-xl bg-slate-900 text-white hover:opacity-90">Get updates</button>
           </form>
-          <p className="text-xs text-slate-500 mt-3">Or email us: projectsclub@utoronto.ca</p>
+          <p className="text-xs text-slate-500 mt-3">Or email us: <a href="mailto:projectsclub@utoronto.ca">projectsclub@utoronto.ca</a></p>
         </div>
       </section>
 
@@ -180,9 +190,22 @@ export default function App() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-sm flex flex-col md:flex-row items-center justify-between gap-3">
           <p>© {new Date().getFullYear()} Projects Club, University of Toronto</p>
           <div className="flex items-center gap-4">
-            <a href="#" className="underline underline-offset-4">Instagram</a>
-            <a href="#" className="underline underline-offset-4">LinkedIn</a>
-            <a href="#" className="underline underline-offset-4">Email</a>
+            <a href="https://discord.gg/EpgUyjtZm5" target="_blank">
+              <span><i className="fa-brands fa-discord"></i> </span>
+              <span className="underline underline-offset-4">Discord</span>
+            </a>
+            <a href="https://www.instagram.com/ut_projects" target="_blank">
+              <span><i className="fa-brands fa-instagram"></i> </span>
+              <span className="underline underline-offset-4">Instagram</span>
+            </a>
+            <a href="https://www.linkedin.com/company/uoft-project-club" target="_blank">
+              <span><i className="fa-brands fa-linkedin"></i> </span>
+              <span className="underline underline-offset-4">LinkedIn</span>
+            </a>
+            <a href="mailto:projectsclub@utoronto.ca">
+              <span><i className="fa-solid fa-envelope"></i> </span>
+              <span className="underline underline-offset-4">Email</span>
+            </a>
           </div>
         </div>
       </footer>
