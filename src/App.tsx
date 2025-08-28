@@ -2,12 +2,12 @@ import { useState, useEffect } from "react";
 
 // ⬇️ Replace these with your real images (GitHub, Google Drive public links, or /public folder paths)
 const GALLERY = [
-  { src: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600", alt: "Hackathon team presenting" },
-  { src: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?q=80&w=1600", alt: "Workshop crowd" },
-  { src: "https://images.unsplash.com/photo-1557800636-894a64c1696f?q=80&w=1600", alt: "Code sprint" },
-  { src: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1600", alt: "Guest speaker talk" },
-  { src: "https://images.unsplash.com/photo-1551836022-4c4c79ecde8f?q=80&w=1600", alt: "Networking session" },
-  { src: "https://images.unsplash.com/photo-1556761175-4b46a572b786?q=80&w=1600", alt: "Team collaboration" }
+  { src: "/HTFgroupPhoto.JPG", alt: "Hack The Future 2025" },
+  { src: "/HTFworkshop.JPG", alt: "Workshop crowd" },
+  { src: "/HTFpitch.JPG", alt: "Hack The Future Pitch" },
+  { src: "/HTFspeaker.webp", alt: "Hack The Future Speaker" },
+  { src: "/HTFjudges.JPG", alt: "Judge Panel" },
+  { src: "/HTFrandomTeam.JPG", alt: "Team collaboration" }
 ];
 
 export default function App() {
@@ -60,7 +60,8 @@ export default function App() {
               Projects Club connects Rotman Commerce and CS students to ship portfolio‑worthy projects: hackathons, build nights, workshops, and industry collabs.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1h5CuLi0lXiUQ2n59tWM7Xn5aFbfAY4sThN-9O2dGlsBKqA/viewform" target="_blank" className="px-4 py-2 rounded-xl bg-slate-900 text-white hover:opacity-90">Apply / Join</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSf1h5CuLi0lXiUQ2n59tWM7Xn5aFbfAY4sThN-9O2dGlsBKqA/viewform" target="_blank" className="px-4 py-2 rounded-xl bg-slate-900 text-white hover:opacity-90">Apply</a>
+              <a href="https://discord.gg/EpgUyjtZm5" target="_blank" className="px-4 py-2 rounded-xl bg-slate-900 text-white hover:opacity-90">Join our Discord <i className="fa-brands fa-discord"></i></a>
               <a href="#events" className="px-4 py-2 rounded-xl ring-1 ring-slate-300 hover:bg-white">Upcoming Events</a>
             </div>
             <div className="mt-6 flex items-center gap-6 text-sm text-slate-500">
